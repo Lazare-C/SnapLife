@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "34309441533",
+    "project_id": "snaplifelc",
+    "storage_bucket": "snaplifelc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34309441533:android:c66b4173b0da942b53bb94",
+        "android_client_info": {
+          "package_name": "com.snaplife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34309441533-99reuc4ifkqfn1ggfipj74mdr5c34iqk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.snaplife",
+            "certificate_hash": "d3137d564df5634c34c2660bb75288f199134bb9"
+          }
+        },
+        {
+          "client_id": "34309441533-cutm10ikgs48i7c35dqd6h0d2h9veaqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1zn5EAcAyj_W3mnvaZBXcVU5qq1a6V4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34309441533-cutm10ikgs48i7c35dqd6h0d2h9veaqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
