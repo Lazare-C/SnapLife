@@ -1,0 +1,19 @@
+{
+  "name": "I8y7qo7FDyNYjXkSfhJr6IVDSxUd",
+  "bucket": "snaplifelc.appspot.com",
+  "contentType": "image/jpeg",
+  "metageneration": 1,
+  "generation": 1624911355500,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "a3f1a609-c40e-423f-88b4-480db22d3140"
+  ],
+  "timeCreated": "2021-06-28T20:15:55.499Z",
+  "updated": "2021-06-28T20:15:55.502Z",
+  "size": 145748,
+  "md5Hash": "NYRJ4YPx1akE8kXYzaKPAA==",
+  "crc32c": "2666362898"
+}

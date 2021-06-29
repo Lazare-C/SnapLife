@@ -6,7 +6,7 @@ import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 export default function PhoneSignIn({navigation}) {
   // If null, no SMS has been sent
   const [confirm , setConfirm] : FirebaseAuthTypes.ConfirmationResult | any = useState(null);
-  const  [user, setUser]: FirebaseAuthTypes.User | any = useState( auth().currentUser);
+  const  [user, setUser]= useState<FirebaseAuthTypes.User | null>( auth().currentUser);
   const [name, setName] = useState('');
   const [code, setCode] = useState('');
   const [phone, setPhone] = useState('');
@@ -28,7 +28,7 @@ export default function PhoneSignIn({navigation}) {
   }
 
 
-  async function confirmCode(code ) {
+  async function confirmCode(code: string ) {
     try {
        setUser(await confirm.confirm(code));
       console.log(confirm);
@@ -40,7 +40,7 @@ export default function PhoneSignIn({navigation}) {
   async function changeName(user: FirebaseAuthTypes.User,dpname: string ) {
     try {
 
-        await auth().currentUser.updateProfile({
+        await user.updateProfile({
             displayName: dpname,
           });
    
@@ -59,11 +59,9 @@ export default function PhoneSignIn({navigation}) {
 
     return(
 
-
-
 <>
 <Text>{JSON.stringify(user)}</Text>
-<Button title="update" onPress={() => { auth().signOut(); setUser()}}/>
+<Button title="update" onPress={() => { auth().signOut(); setUser(null)}}/>
 
 <Button title="Back" onPress={() =>  navigation.navigate('Home')}/>
 

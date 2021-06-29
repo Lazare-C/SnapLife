@@ -3,11 +3,13 @@ import { createStackNavigator } from "@react-navigation/stack";
 import React, { useState, useEffect, createContext } from "react";
 import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
-import loginScreen from '../Screen/login/loginScreen';
+import loginScreen from '../Screen/login/loginScreen'
 import HomeScreen from '../Screen/HomeScreen';
 import App from "../../App";
 
 import NavigationLogin from "./NavigationLogin";
+import UserScreen from "../Screen/UserScreen";
+import PictureSender from "../Screen/PictureSender";
 
 export const AuthContext = createContext(null)
 export default function NavigationHome(){
@@ -34,7 +36,10 @@ export default function NavigationHome(){
       <AuthContext.Provider value={user}>
               <Stack.Navigator>
         {user != null ? (
-             <Stack.Screen name="Home" component={HomeScreen} />
+             <><Stack.Screen name="Home" component={HomeScreen} />
+             <Stack.Screen name="UserScreen" component={UserScreen} />
+             <Stack.Screen name="PictureSender" component={PictureSender} />
+             </>
           ) : (
 
             <Stack.Screen name="login" component={loginScreen} />

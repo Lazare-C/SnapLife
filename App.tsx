@@ -22,7 +22,26 @@
  import NavigationHome from './src/navigation/Navigation';
 
 
+ import '@react-native-firebase/app';
+import firestore from '@react-native-firebase/firestore';
+import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
+import storage from '@react-native-firebase/storage';
+
+
  const App = () => {
+
+  if (__DEV__) {
+    console.log('DEBUG FIREBASE');
+    firestore().settings({ host: 'localhost:8080', ssl: false });
+auth().useEmulator('http://localhost:9099')
+storage().useEmulator('localhost', 9199)
+
+}
+
+
+
+
+
 
 
  return NavigationHome();

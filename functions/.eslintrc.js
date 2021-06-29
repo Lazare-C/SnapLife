@@ -19,12 +19,15 @@ module.exports = {
   },
   ignorePatterns: [
     "/lib/**/*", // Ignore built files.
+    "/node_modules/**/*"
   ],
+
+  
   plugins: [
     "@typescript-eslint",
     "import",
   ],
   rules: {
-    quotes: ["error", "double"],
+    quotes: [1, "double"],
   },
 };

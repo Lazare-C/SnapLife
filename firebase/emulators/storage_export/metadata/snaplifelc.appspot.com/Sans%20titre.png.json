@@ -1,0 +1,19 @@
+{
+  "name": "Sans titre.png",
+  "bucket": "snaplifelc.appspot.com",
+  "contentType": "image/png",
+  "metageneration": 1,
+  "generation": 1624911657976,
+  "storageClass": "STANDARD",
+  "etag": "someETag",
+  "contentDisposition": "inline",
+  "contentEncoding": "identity",
+  "downloadTokens": [
+    "add4a466-8283-4b95-80fa-95be856631bb"
+  ],
+  "timeCreated": "2021-06-28T20:20:57.975Z",
+  "updated": "2021-06-28T20:20:57.976Z",
+  "size": 17404,
+  "md5Hash": "p6siPXOKYmQavBjTX3O0Bw==",
+  "crc32c": "2167122661"
+}
