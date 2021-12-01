@@ -1,4 +1,4 @@
-import {storage, firestore} from "firebase-admin";
+import {firestore} from "firebase-admin";
 
 
 import functions = require("firebase-functions");
@@ -26,10 +26,18 @@ exports.UserDeleteAccount = functions.
     });
 
 exports.UploadPicture = functions.storage.object().onFinalize(
-    (object, context) => {
+    async (object, context) => {
+      // const bucket = admin.storage().bucket(object.bucket);
+      // const file = bucket.file(object.name ||"");
+      // const signedURLArray =
+      // await file.getSignedUrl({action: "read", expires: "01-01-2042"});
+      // const url = signedURLArray[0];
+
+
       const filePath = object.name || "";
       firestore().collection("Users").doc(filePath).update({
         LastPicture: object.mediaLink,
+        // LastPicutreSigned: url,
         selflink: object.selfLink,
         timestamp: firestore.FieldValue.serverTimestamp(),
         id: filePath,

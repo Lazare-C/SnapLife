@@ -6,25 +6,14 @@ import storage from '@react-native-firebase/storage';
 
 export default function PhoneSignIn({navigation}) {
   const [user, setUser] = useState<FirebaseAuthTypes.User | null>( auth().currentUser);
-
-
-  async function getDLUri(url){
-  let link =  await storage().ref('o7AmUGPXXoO4jic6eNru8haQCJNa').getDownloadURL()
-  console.log(link);
-  }
-  try {
-    getDLUri("");
-  } catch (error) {
-    console.log(error);
-  }
    
   return (
     <>
 <Text>Wshhh {user?.displayName ||user?.phoneNumber} </Text>
-<Image
+{/* <Image
         source={{
           uri: 'http://localhost:9199/v0/b/snaplifelc.appspot.com/o/Sans%20titre.png?alt=media',
-        }}/>
+        }}/> */}
 
 <Button title="LogOut" onPress={async () => {await auth().signOut(); setUser(auth().currentUser)}}/>
 <Button title="Users List" onPress={() => {navigation.navigate('UserScreen')}}/>
